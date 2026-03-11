@@ -1,10 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/*AUTOR*/
 router.get('/', function(req, res, next) {
-  res.render('index', { 
-    title: 'Proyecto Asombroso✨'});
+  res.render('author',{ 
+    author: 'FABIAN',
+    lastname: 'MAGOS',
+  
+  });
 });
 
 module.exports = router;
