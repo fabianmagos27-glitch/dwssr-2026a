@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "type": "module",
   "private": true,
-  "scripts": {
-    "start": "DEBUG=dwssr:* node ./bin/www"
+  "scripts": { 
+    "start": "DEBUG=dwssr:* nodemon./server/bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
