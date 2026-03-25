@@ -6,9 +6,9 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 //importando enrutadores
-import indexRouter from './routes/index.js';
-import usersRouter from './routes/users.js';
-import authorRouter from './routes/author.js';
+import indexRouter from '#routes/index.js';
+import usersRouter from '#routes/users.js';
+import authorRouter from '#routes/author.js';
 //import app from '../app.js';
 var app = express();
 
