@@ -2,7 +2,7 @@
 import express from 'express';
 const router = express.Router();
 
-/*AUTOR*/
+/*AUTOR*///eslint-disable-next-line no-unused-vars
 router.get('/', function(req, res, next) {
   res.render('author',{ 
     author: 'FABIAN',
