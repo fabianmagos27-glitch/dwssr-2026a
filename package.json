@@ -21,7 +21,8 @@
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "vite": "^7.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -33,8 +34,7 @@
     "globals": "^17.5.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.3",
-    "tailwindcss": "^4.2.4",
-    "vite": "^8.0.2"
+    "tailwindcss": "^4.2.4"
   },
   "imports": {
     "#server/*": "./server/*",

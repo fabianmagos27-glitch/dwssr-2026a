@@ -1,9 +1,5 @@
-/* Estilos principales*/
-body{
-    padding: 50px;
-    font: 14px "Lucida Grande", Helvetica , Arial  , sans-serif;
-}
-
-h1{
-    color: #00B7FF;
-}
+@import "tailwindcss";
+/* Esta linea especifica donde se encuentra las clases de tailwindcss */
+@source "../../server/views/**/*.hbs";
+/*  */
+@plugin "daisyui/index.js";
