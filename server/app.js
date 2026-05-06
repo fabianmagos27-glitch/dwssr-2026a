@@ -3,7 +3,7 @@ import express from 'express';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import cookieParser from 'cookie-parser';
-import logger from 'morgan';
+import morgan from 'morgan';
 import hbs from 'hbs';
 
 
@@ -28,7 +28,7 @@ app.set('view engine', 'hbs');
 //Registrando Helpers para el Engine
 registerViteHelper(hbs)
 
-app.use(logger('dev'));
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
