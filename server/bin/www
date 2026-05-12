@@ -5,24 +5,25 @@
  */
 
 import app from '../app.js';
-import createDebug from 'debug';
-import http from 'node:http';
-
-const debug = createDebug('dwssr:server')
-const info = createDebug('dwssr:info')
+import debug from 'debug';
+const serverDebug = debug('dwssr:server');
+const info = debug('dwssr:info');
+import http from 'http';
+//importando el logger winston
+import logger from '../lib/winston.js';
 
 /**
  * Get port from environment and store in Express.
  */
-info('🔍Normalizing port');
+
 var port = normalizePort(process.env.PORT || '3000');
-info('✅port normalized: ' + port);
+logger.info('✅port normalized: ' + port);
 app.set('port', port);
 
 /**
  * Create HTTP server.
  */
-info('🚀 Starting server on port ' + port);
+logger.info(`🚀 Starting server on port ${port}`);
 var server = http.createServer(app);
 
 /**
@@ -69,11 +70,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
+      logger.error(bind + ' requires elevated privileges');
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
+      logger.error(bind + ' is already in use');
       process.exit(1);
       break;
     default:
@@ -90,7 +91,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('📢 Listening on ' + bind);
-
-
+  logger.info(`📢 App Listening on  $ {bind} port`);
 }
